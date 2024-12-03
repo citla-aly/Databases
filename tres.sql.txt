@@ -1,0 +1,19 @@
+SELECT a.id_atleta,
+      a.nombre_atleta,
+      a.edad_atleta,
+      a.sexo_atleta,
+      b.*
+FROM atleta a
+INNER JOIN domicilio b
+ON a.id_domicilio=b.id_domicilio;
+
+
+SELECT b.id_atleta,
+      b.nombre_atleta,
+      a.id_wod,
+      a.fecha,
+      a.registro_tiempo,
+      a.lugar_disponible
+   FROM WOD A
+inner JOIN atleta B
+ON a.id_wod=b.id_wod;
